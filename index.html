@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Princess Bhavani 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #d63384;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6f42c1;
+            font-weight: 300;
+        }
+        
+        .story-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #ffd700;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-section::before {
+            content: "🌺";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .question {
+            font-size: 1.3rem;
+            color: #d63384;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .sarcastic-note {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .answer-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .answer-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-yes {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+        }
+        
+        .btn-no {
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            color: white;
+        }
+        
+        .btn-maybe {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            color: white;
+        }
+        
+        .answer-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .memory-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ff6b6b;
+        }
+        
+        .memory-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+        
+        .memory-text {
+            line-height: 1.6;
+            color: #495057;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .apology-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .apology-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .apology-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: #ff6b6b;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .dosa-emoji {
+            font-size: 1.5rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .south-indian-border {
+            border: 3px solid #ffd700;
+            border-image: linear-gradient(45deg, #ff6b6b, #ffd700, #4ecdc4) 1;
+        }
+        
+        .temple-design {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">என் அன்பு Bhavani 💕</h1>
+            <p class="subtitle">My South Indian Princess, My Everything</p>
+            <div class="temple-design">🏛️ OM 🏛️</div>
+        </div>
+        
+        <!-- Question 1 -->
+        <div class="story-section" id="question1">
+            <div class="question">
+                Do you remember that day outside KBP College? 🏫
+            </div>
+            <div class="sarcastic-note">
+                (Of course you do, I was the one waiting like a statue for 45 minutes! 😤)
+            </div>
+            <div class="answer-buttons">
+                <button class="answer-btn btn-yes" onclick="nextQuestion(1, 'yes')">Yes, you poor thing! 😏</button>
+                <button class="answer-btn btn-no" onclick="nextQuestion(1, 'no')">No, refresh my memory 🙄</button>
+                <button class="answer-btn btn-maybe" onclick="nextQuestion(1, 'maybe')">Maybe... tell me more 😊</button>
+            </div>
+        </div>
+        
+        <!-- Memory 1 -->
+        <div class="story-section hidden" id="memory1">
+            <div class="memory-box south-indian-border">
+                <div class="memory-title">KBP College - Our First Meeting 💫</div>
+                <div class="memory-text">
+                    There I was, standing outside KBP College like a loyal puppy 🐕, checking my watch every 2 minutes. 
+                    "She'll be here soon," I told myself... 15 minutes passed... 30 minutes... 45 MINUTES! 
+                    And then... like a scene from a Tamil movie, you walked out looking absolutely stunning! 
+                    All that waiting suddenly made sense. You came like a real princess - 
+                    <strong>என் அழகி ராணி</strong> (My beautiful queen) 👑
+                    <br><br>
+                    We had coffee ☕ and <span class="dosa-emoji">masala dosa 🥞</span> together, 
+                    and every bite tasted like heaven because I was with you!
+                </div>
+            </div>
+            <div class="answer-buttons">
+                <button class="answer-btn btn-yes" onclick="nextQuestion(2, 'continue')">Sweet memories! Continue... 💕</button>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="story-section hidden" id="question2">
+            <div class="question">
+                And our second meeting... do you remember what we had? 🤔
+            </div>
+            <div class="sarcastic-note">
+                (Hint: It rhymes with "Java Cosa" and you insisted on it! 😜)
+            </div>
+            <div class="answer-buttons">
+                <button class="answer-btn btn-yes" onclick="nextQuestion(2, 'rava')">Rava Dosa! 🥞</button>
+                <button class="answer-btn btn-no" onclick="nextQuestion(2, 'forgot')">I forgot 🤷‍♀️</button>
+                <button class="answer-btn btn-maybe" onclick="nextQuestion(2, 'tease')">Tell me, forgetful boy! 😈</button>
+            </div>
+        </div>
+        
+        <!-- Memory 2 -->
+        <div class="story-section hidden" id="memory2">
+            <div class="memory-box south-indian-border">
+                <div class="memory-title">Second Meeting - Rava Dosa Romance 💕</div>
+                <div class="memory-text">
+                    Again we met, and again you chose <span class="dosa-emoji">rava dosa 🥞</span>! 
+                    I was like "Really? Again?" but seeing your excited face, I would have ordered 
+                    a hundred rava dosas! 😍 You looked so cute eating it, talking about everything and nothing. 
+                    <strong>உன் சிரிப்பு</strong> (Your smile) made everything perfect! 
+                    <br><br>
+                    Those simple moments with <span class="dosa-emoji">dosa 🥞</span> and 
+                    <strong>எனக்கு மிகவும் பிடித்த பெண்</strong> (my most favorite girl) 
+                    became my most treasured memories! 🥺💖
+                </div>
+            </div>
+            <div class="answer-buttons">
+                <button class="answer-btn btn-yes" onclick="showQuestion3()">Those were beautiful days! 😊</button>
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="story-section hidden" id="question3">
+            <div class="question">
+                Now... am I in trouble for something? 😅
+            </div>
+            <div class="sarcastic-note">
+                (Because I'm pretty sure I am, and I don't even know what I did this time! 🤦‍♂️)
+            </div>
+            <div class="answer-buttons">
+                <button class="answer-btn btn-yes" onclick="showApology('yes')">Yes, you idiot! 😠</button>
+                <button class="answer-btn btn-no" onclick="showApology('no')">No, but I like seeing you panic 😂</button>
+                <button class="answer-btn btn-maybe" onclick="showApology('maybe')">Maybe... let's see your apology first 🤨</button>
+            </div>
+        </div>
+        
+        <!-- Final Apology -->
+        <div class="story-section hidden" id="final-apology">
+            <div class="apology-section">
+                <div class="apology-title">என் மன்னிப்பு 🙏</div>
+                <div class="apology-text">
+                    My dearest Bhavani, my <strong>கண்மணி</strong> (apple of my eye),
+                    <br><br>
+                    Whatever I did, whatever I said, whatever I forgot to do or say - 
+                    I'm truly, deeply, madly sorry! 😔💔
+                    <br><br>
+                    You are my <strong>உயிர்</strong> (life), my <strong>இதயம்</strong> (heart), 
+                    my everything! Just like how you made me wait 45 minutes but it was worth it, 
+                    I promise whatever mistake I made, I'll make it worth your forgiveness! 
+                    <br><br>
+                    <span class="dosa-emoji">🥞</span> I'll take you for unlimited dosas!<br>
+                    ☕ Unlimited coffee dates!<br>
+                    💕 And unlimited love and care!
+                    <br><br>
+                    Please forgive your stupid, but loving boyfriend! 🥺
+                    <br>
+                    <strong>நான் உன்னை நேசிக்கிறேன்</strong> ❤️
+                    <br>
+                    (I love you)
+                </div>
+            </div>
+            
+            <div class="story-section" style="text-align: center; margin-top: 20px;">
+                <div class="question">Will you forgive me? 🥺👉👈</div>
+                <div class="answer-buttons">
+                    <button class="answer-btn btn-yes" onclick="showForgiveness('yes')">Yes, come here! 🤗</button>
+                    <button class="answer-btn btn-maybe" onclick="showForgiveness('maybe')">Maybe... more dosas first! 😏</button>
+                    <button class="answer-btn btn-no" onclick="showForgiveness('no')">Keep apologizing! 😤</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Forgiveness Response -->
+        <div class="story-section hidden" id="forgiveness-response">
+            <div class="memory-box" style="text-align: center; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                <div class="memory-title">Thank you, my love! 💕</div>
+                <div class="memory-text" id="forgiveness-text"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        
+        setInterval(createHeart, 2000);
+        
+        function nextQuestion(current, answer) {
+            document.getElementById('question' + current).classList.add('hidden');
+            
+            if (current === 1) {
+                document.getElementById('memory1').classList.remove('hidden');
+            } else if (current === 2) {
+                document.getElementById('memory2').classList.remove('hidden');
+            }
+        }
+        
+        function showQuestion3() {
+            document.getElementById('memory2').classList.add('hidden');
+            document.getElementById('question3').classList.remove('hidden');
+        }
+        
+        function showApology(answer) {
+            document.getElementById('question3').classList.add('hidden');
+            document.getElementById('final-apology').classList.remove('hidden');
+        }
+        
+        function showForgiveness(answer) {
+            const responses = {
+                'yes': "You're the best girlfriend ever! I promise to be more careful and never upset my princess again! 👑💕 Now let's go get some masala dosa to celebrate! 🥞",
+                'maybe': "More dosas it is! I'll take you to the best South Indian restaurant and we'll have dosa, idli, sambar, everything you want! Your wish is my command, my queen! 👸🥞",
+                'no': "I'll keep apologizing until you forgive me! I'll write love letters in Tamil, bring you jasmine flowers, sing Telugu songs (badly), whatever it takes! என் அன்பே! 🌺🎵"
+            };
+            
+            document.getElementById('forgiveness-response').classList.remove('hidden');
+            document.getElementById('forgiveness-text').innerHTML = responses[answer];
+            
+            // Scroll to response
+            document.getElementById('forgiveness-response').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Add some sparkle effects
+        setInterval(() => {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.fontSize = '20px';
+            sparkle.style.zIndex = '999';
+            sparkle.style.animation = 'float 3s ease-out forwards';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 3000);
+        }, 1500);
+    </script>
+</body>
+</html>
